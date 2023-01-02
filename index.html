@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Material Design for Bootstrap</title>
+    <title>APOD | Api</title>
     <!-- MDB icon -->
     <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
     <!-- Font Awesome -->
@@ -46,25 +46,13 @@
       <!-- Navbar brand -->
       <a class="navbar-brand mt-2 mt-lg-0" href="#">
         <img
-          src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-          height="15"
+          src="img/mdb-favicon.ico"
+          height="50"
           alt="MDB Logo"
           loading="lazy"
         />
       </a>
-      <!-- Left links -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Dashboard</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Team</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Projects</a>
-        </li>
-      </ul>
-      <!-- Left links -->
+
     </div>
     <!-- Collapsible wrapper -->
 
@@ -142,7 +130,21 @@
   <!-- Container wrapper -->
 </nav>
 <!-- Navbar -->
-<button type="button" id="dameData" class="btn btn-light" data-mdb-ripple-color="dark">Light</button>
+
+<div class="container">
+    <div class="col-md-8 mb-4 mb-md-0">
+        <img id="image" src="" class="w-100" alt="">
+        <h1 id="title"></h1>
+        <small id="subtitle"></small>
+        <p id="explanation"></p>
+            <button type="button" id="dameData" class="btn btn-light" data-mdb-ripple-color="dark">Ver foto del dia de hoy</button>
+        <input class="form-control" id="datepicker" size="16" type="date" value="12-02-2012" />
+    
+    </div>
+    <div class="col-md-4 mb-4 mb-md-0"></div>
+
+</div>
+
 
 
 
@@ -150,8 +152,8 @@
 
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+   Hecho con <i class="bi bi-suit-heart"></i>
+   por Sofia Dominguez | 2023
   </div>
   <!-- Copyright -->
 </footer>
@@ -166,20 +168,34 @@
       let fullUrl = queryUrl + queryKey;
       $(document).ready(function(){
         const Url = fullUrl;
-
         $('#dameData').click(function(){
           $.ajax({
             url: fullUrl,
             type: "GET",
-            success: function(result){
-              console.log(result)
+            success: function(data){
+              console.log(data);
+              let title = data.copyright;
+              let date = data.date;
+              let explanation = data.explanation;
+              let hdurl = data.hdurl;
+              let media_type = data.media_type;
+              let service_version = data.service_version;
+              let image = data.url
+              
+              document.getElementById('image').src = image;  
+              document.getElementById('title').innerHTML = title;  
+              document.getElementById('subtitle').innerHTML = date;  
+              document.getElementById('explanation').innerHTML = explanation;  
+
+              //Recorrer el array de datos para que cada vez que elija una fecha lo vaya cambiando de acuerdo a la fecha que le toque 
+              
             },
             error: function(error){
-              console.log('Error')
+              console.log('Error');
             }
           })
         })
-      })
+        })
       
       
     </script>
