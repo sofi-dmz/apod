@@ -131,24 +131,59 @@
 </nav>
 <!-- Navbar -->
 
-<div class="container">
-    <div class="col-md-8 mb-4 mb-md-0">
-        <img id="image" src="" class="w-100" alt="">
-        <h1 id="title"></h1>
-        <small id="subtitle"></small>
-        <p id="explanation"></p>
-            <button type="button" id="dameData" class="btn btn-light" data-mdb-ripple-color="dark">Ver foto del dia de hoy</button>
-        <input class="form-control" id="datepicker" size="16" type="date" value="12-02-2012" />
-    
+<header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarExample01"
+          aria-controls="navbarExample01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+  
+    <!-- Background image -->
+    <div
+      class="p-5 text-center bg-image"
+      style="
+        background-image: url('./img/B33LRGB_fb1024.png');
+        height: 400px;
+      "
+    >
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white">
+            <h1 class="mb-3">APOD</h1>
+            <h4 class="mb-3">Astrological Picture of the Day</h4>
+            <a id="dameData" class="btn btn-outline-light btn-lg" href="#!" role="button"
+            >See today's photo</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-md-4 mb-4 mb-md-0"></div>
-
+    <!-- Background image -->
+  </header>
+<div class="container">
+    <div class="row bg-light">
+        </div>
+            <input class="form-control" type="date"/>
+            <img id="image" src="" class="w-100" alt="">
+            <h1 id="title"></h1>
+            <small id="subtitle"></small>
+            <p id="explanation"></p>
+        </div>
 </div>
-
-
-
-
-
 
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
@@ -163,10 +198,16 @@
     <!-- MDB -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <script type="text/javascript">
+        
       let queryUrl = "https://api.nasa.gov/planetary/apod?";
       let queryKey =  "api_key=ZeOa1oNaH8R1ThtT5WEsTYl8wdk0sY7aTV4KIdMn";
       let fullUrl = queryUrl + queryKey;
       $(document).ready(function(){
+        $('#calendar').datepicker({
+        language: "es", 
+        calendarWeeks: true, 
+        todayHighlight: true
+        });
         const Url = fullUrl;
         $('#dameData').click(function(){
           $.ajax({
@@ -199,5 +240,10 @@
       
       
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/locales/bootstrap-datepicker.nl.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet"/>
+    
   </body>
 </html>
