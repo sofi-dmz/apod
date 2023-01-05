@@ -44,43 +44,26 @@
       </style>
     
     
-    
-      <!-- Background image -->
-      <div
-        id="intro-example"
-        class="p-5 text-center bg-image"
-        style="background-image: url('./img/astronaut.jpg');">
-        <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);">
-          <div class="d-flex justify-content-start align-items-center h-100">
-            <div class="text-white">
-              <h1>Astronomy Picture of the Day</h1>     <p class="m-2 p-5">Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.</p>
-              <a
-                class="btn btn-outline-light btn-lg m-2"
-                id="dameData"
-                href="#!"
-                role="button"
-                rel="nofollow">
-                See today's photo
-              </a>
-              <a
-                class="btn btn-outline-light btn-lg m-2"
-                href=""
-                role="button">
-                Choose a date</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Background image -->
     </header>
     <div class="container">
-    <div class="row">
+    <div class="row d-flex align-items-center">
+      <h1 class="mt-4">APOD</h1>
+      <a
+      class="btn btn-outline-dark btn-lg"
+      id="dameData"
+      href="#!"
+      role="button"
+      rel="nofollow">
+      See today's photo
+    </a>
     <div class="col-md-6 mt-4">
-      <img id="image" src="" class="w-100 fluid shadow-2-strong" alt="">
-  </div>
-    <div class="col-md-6 mt-4">
-          <h1 id="title"></h1>
-          <small id="subtitle"></small>
+      <img id="image" src="" class="w-100 fluid shadow-4-strong" alt="">
+      <h6 class="mt-4">Choose another date! (Pstt.. try out your birthday)</h6>
+      <input class="form-control"type="date"/>
+    </div>
+    <div class="col-md-6 mt-4 ">
+          <h1 id="title" class="mt-4"></h1>
+          <p id="subtitle"></p>
           <p id="explanation"></p>
       </div>
     </div>
@@ -89,15 +72,7 @@
     <!-- Start your project here-->
 
 </main>
-<!-- Footer -->
-<footer class="bg-light text-center text-lg-start">
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2023 Copyright:
-    <a class="text-dark" href="https://mdbootstrap.com/">Sofia Dominguez</a>
-  </div>
-  <!-- Copyright -->
-</footer>
+
     <!-- End your project here-->
 
     <!-- MDB -->
