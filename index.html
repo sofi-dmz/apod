@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -17,182 +17,87 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope&family=Press+Start+2P&display=swap" rel="stylesheet">
     <!-- MDB -->
     <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   </head>
   <body>
-    <!-- Start your project here-->
-   <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
-  <!-- Container wrapper -->
-  <div class="container-fluid">
-    <!-- Toggle button -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <!-- Collapsible wrapper -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <!-- Navbar brand -->
-      <a class="navbar-brand mt-2 mt-lg-0" href="#">
-        <img
-          src="img/mdb-favicon.ico"
-          height="50"
-          alt="MDB Logo"
-          loading="lazy"
-        />
-      </a>
-
-    </div>
-    <!-- Collapsible wrapper -->
-
-    <!-- Right elements -->
-    <div class="d-flex align-items-center">
-      <!-- Icon -->
-      <a class="text-reset me-3" href="#">
-        <i class="fas fa-shopping-cart"></i>
-      </a>
-
-      <!-- Notifications -->
-      <div class="dropdown">
-        <a
-          class="text-reset me-3 dropdown-toggle hidden-arrow"
-          href="#"
-          id="navbarDropdownMenuLink"
-          role="button"
-          data-mdb-toggle="dropdown"
-          aria-expanded="false"
-        >
-          <i class="fas fa-bell"></i>
-          <span class="badge rounded-pill badge-notification bg-danger">1</span>
-        </a>
-        <ul
-          class="dropdown-menu dropdown-menu-end"
-          aria-labelledby="navbarDropdownMenuLink"
-        >
-          <li>
-            <a class="dropdown-item" href="#">Some news</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#">Another news</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </li>
-        </ul>
-      </div>
-      <!-- Avatar -->
-      <div class="dropdown">
-        <a
-          class="dropdown-toggle d-flex align-items-center hidden-arrow"
-          href="#"
-          id="navbarDropdownMenuAvatar"
-          role="button"
-          data-mdb-toggle="dropdown"
-          aria-expanded="false"
-        >
-          <img
-            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-            class="rounded-circle"
-            height="25"
-            alt="Black and White Portrait of a Man"
-            loading="lazy"
-          />
-        </a>
-        <ul
-          class="dropdown-menu dropdown-menu-end"
-          aria-labelledby="navbarDropdownMenuAvatar"
-        >
-          <li>
-            <a class="dropdown-item" href="#">My profile</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#">Settings</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#">Logout</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- Right elements -->
-  </div>
-  <!-- Container wrapper -->
-</nav>
-<!-- Navbar -->
-
-<header>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <div class="container-fluid">
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-mdb-toggle="collapse"
-          data-mdb-target="#navbarExample01"
-          aria-controls="navbarExample01"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarExample01">
-        </div>
-      </div>
-    </nav>
-    <!-- Navbar -->
-  
-    <!-- Background image -->
-    <div
-      class="p-5 text-center bg-image"
-      style="
-        background-image: url('./img/B33LRGB_fb1024.png');
-        height: 400px;
-      "
-    >
-      <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
-        <div class="d-flex justify-content-center align-items-center h-100">
-          <div class="text-white">
-            <h1 class="mb-3">APOD</h1>
-            <h4 class="mb-3">Astrological Picture of the Day</h4>
-            <a id="dameData" class="btn btn-outline-light btn-lg" href="#!" role="button"
-            >See today's photo</a
-            >
+    <header>
+      <!-- Intro settings -->
+      <style>
+        /* Default height for small devices */
+        #intro-example {
+          height: 400px;
+        }
+    
+        /* Height for devices larger than 992px */
+        @media (min-width: 992px) {
+          #intro-example {
+            height: 600px;
+          }
+        }
+      </style>
+    
+    
+    
+      <!-- Background image -->
+      <div
+        id="intro-example"
+        class="p-5 text-center bg-image"
+        style="background-image: url('./img/astronaut.jpg');">
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.7);">
+          <div class="d-flex justify-content-start align-items-center h-100">
+            <div class="text-white">
+              <h1>Astronomy Picture of the Day</h1>     <p class="m-2 p-5">Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.</p>
+              <a
+                class="btn btn-outline-light btn-lg m-2"
+                id="dameData"
+                href="#!"
+                role="button"
+                rel="nofollow">
+                See today's photo
+              </a>
+              <a
+                class="btn btn-outline-light btn-lg m-2"
+                href=""
+                role="button">
+                Choose a date</a>
+            </div>
           </div>
         </div>
       </div>
+      <!-- Background image -->
+    </header>
+    <div class="container">
+    <div class="row">
+    <div class="col-md-6 mt-4">
+      <img id="image" src="" class="w-100 fluid shadow-2-strong" alt="">
+  </div>
+    <div class="col-md-6 mt-4">
+          <h1 id="title"></h1>
+          <small id="subtitle"></small>
+          <p id="explanation"></p>
+      </div>
     </div>
-    <!-- Background image -->
-  </header>
-<div class="container">
-    <div class="row bg-light">
-        </div>
-            <input class="form-control" type="date"/>
-            <img id="image" src="" class="w-100" alt="">
-            <h1 id="title"></h1>
-            <small id="subtitle"></small>
-            <p id="explanation"></p>
-        </div>
-</div>
+    </div>
 
+    <!-- Start your project here-->
+
+</main>
+<!-- Footer -->
+<footer class="bg-light text-center text-lg-start">
   <!-- Copyright -->
-  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-   Hecho con <i class="bi bi-suit-heart"></i>
-   por Sofia Dominguez | 2023
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2023 Copyright:
+    <a class="text-dark" href="https://mdbootstrap.com/">Sofia Dominguez</a>
   </div>
   <!-- Copyright -->
 </footer>
-<!-- Footer -->
     <!-- End your project here-->
 
     <!-- MDB -->
@@ -222,14 +127,16 @@
               let media_type = data.media_type;
               let service_version = data.service_version;
               let image = data.url
-              
+
               document.getElementById('image').src = image;  
               document.getElementById('title').innerHTML = title;  
               document.getElementById('subtitle').innerHTML = date;  
               document.getElementById('explanation').innerHTML = explanation;  
+              let datapicker = document.getElementById('datapicker').value;
 
-              //Recorrer el array de datos para que cada vez que elija una fecha lo vaya cambiando de acuerdo a la fecha que le toque 
-              
+              $( "#datapicker" ).change(function() {
+                  console.log('ahre');
+              });
             },
             error: function(error){
               console.log('Error');
