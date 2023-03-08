@@ -10,7 +10,6 @@ import ScrollSpy from './free/scrollspy';
 import Tab from './free/tab';
 import Tooltip from './free/tooltip';
 import Toast from './free/toast';
-
 // MDB FREE COMPONENTS
 import Input from './free/input';
 import Dropdown from './free/dropdown';
