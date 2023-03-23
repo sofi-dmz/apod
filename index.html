@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>APOD | Api</title>
-  <!-- MDB icon -->
-  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
-  <!-- Font Awesome -->
+  <title>APOD | Consumiendo una API</title>
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <!-- Google Fonts Roboto -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Press+Start+2P&display=swap" rel="stylesheet">
-  <!-- MDB -->
   <link rel="stylesheet" href="css/mdb.min.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
   <header>
-    <!-- Intro settings -->
     <style>
       /* Default height for small devices */
       #intro-example {
@@ -39,15 +32,10 @@
   </header>
   <div class="container-sm">
     <div class="row mt-4">
-      <h1>APOD</h1>
-      <p>Discover the cosmos with the astronomical picture of the day</p>
+      <h1>Wanna See The Astronomical Picture of The Day? Take a look at this! </h1>
+      <p>Today's photo is the following one...</p>
     </div>
     <div class="row d-flex align-items-center">
-      <div class="col-md-8 mt-2">
-        <img id="image" src="" class="w-100 fluid shadow-4-strong" alt="">
-        <h6 class="mt-4">Choose another date! (Pstt.. try out your birthday)</h6>
-        <input class="form-control" id="datepicker" type="date" required pattern="\d{4}-\d{2}-\d{2}" />
-      </div>
       <div class="col-md-4 mt-4">
         <h1 id="title" class="mt-4"></h1>
         <p id="subtitle"></p>
@@ -66,7 +54,6 @@
   <link
     href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css"
     rel="stylesheet" />
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
-
 </html>
